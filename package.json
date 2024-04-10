@@ -2,7 +2,7 @@
   "name": "foss-toggle",
   "displayName": "FOSS Toggle",
   "description": "Toggle between arbitrary collections of settings in VSCode; totally inspired by rebornix.toggle, but written FOSS from the ground-up.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "jonnyasmar",
   "license": "MIT",
   "engines": {
