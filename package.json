@@ -1,0 +1,50 @@
+{
+  "name": "foss-toggle",
+  "displayName": "FOSS Toggle",
+  "description": "Toggle between arbitrary collections of settings in VSCode; totally inspired by rebornix.toggle, but written FOSS from the ground-up.",
+  "version": "0.0.1",
+  "publisher": "jonnyasmar",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "foss-toggle.toggle",
+        "title": "Toggle Settings"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonnyasmar/foss-toggle"
+  },
+  "bugs": {
+    "url": "https://github.com/jonnyasmar/foss-toggle/issues"
+  },
+  "homepage": "https://github.com/jonnyasmar/foss-toggle#readme",
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.82.0",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3"
+  }
+}
