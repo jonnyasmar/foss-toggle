@@ -31,9 +31,10 @@ async function toggleConfiguration(args: ToggleArgs): Promise<void> {
   const workspaceConfig = vscode.workspace.getConfiguration();
   const allKeys = new Set<string>(args.value.flatMap(Object.keys));
 
-  let currentIndex = toggleCache[args.id] ?? args.value.findIndex(config =>
+  let currentIndex = toggleCache[args.id] ?? args.value.findIndex(config => {
+    console.log('config =>', config);
     shallowEqual(config, Object.fromEntries([...allKeys].map(key => [key, workspaceConfig.get(key)])))
-  );
+  });
 
   const nextIndex = (currentIndex + 1) % args.value.length;
   toggleCache[args.id] = nextIndex;
